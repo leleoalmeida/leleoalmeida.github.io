@@ -1,0 +1,254 @@
+:root {
+  /* Color Scheme*/
+  --bg-color: rgba(26, 83, 92, 1);
+  --bg-subcolor: rgba(78, 205, 196, 1);
+  --txt-color: rgba(247, 247, 230, 1);
+  --h-color: rgba(255, 107, 107, 1);
+  --h-subcolor: rgba(255, 230, 109, 1);
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Roboto Mono', monospace;
+  color: var(--txt-color);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Grid setup */
+#grid {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}
+
+.content-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.grid-col {
+  opacity: .2;
+  border-left: 1px solid #000;
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+
+.grid-col:last-child {
+  border-right: 1px solid #000;
+}
+
+/* ----------------------------- */
+/* Text configuration */
+p {
+  font-size: 17px;
+  margin-top: 0;
+}
+
+a {
+  color: var(--txt-color);
+  text-decoration: underline;
+}
+
+p a:hover, h3 a:hover {
+  border-bottom-color: transparent;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='white' stroke-width='2' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 calc(100% - 1.5px);
+  background-size: auto 3px;
+  background-repeat: repeat-x;
+  padding-bottom: 1px;
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+}
+
+h1 {
+  margin-top: 0;
+  color: var(--h-color);
+  font-size: 104.5px;
+  font-weight: 600;
+}
+
+h2 {
+  color: var(--h-subcolor);
+  font-size: 70px;
+}
+
+.projects h3 {
+  margin: 0;
+}
+
+.resume-button h3 {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+header img {
+  width: 80px;
+  position: fixed;
+  z-index: -3;
+}
+
+#squi1 {
+  top: 40%;
+  left: 35%;
+}
+
+#squi2 {
+  top: 89%;
+  left: 70%;
+}
+
+#cross1 {
+  top: 74%;
+  left: 12%;
+}
+
+#cross2 {
+  top: 10%;
+  left: 70%;
+}
+
+#circle1 {
+  top: 11%;
+  left: 15%;
+}
+
+#circle2 {
+  top: 60%;
+  left: 80%;
+}
+
+.intro {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  float: right;
+}
+
+.intro-text {
+  position: relative;
+  left: -50%;
+}
+
+.projects {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  float: right;
+}
+
+#proj1, #proj2, #proj3 {
+  float: left;
+  position: relative;
+  width: 25%;
+  left: 12.5%;
+  height: 290px;
+  background-color: var(--h-color);
+}
+
+#proj2 {
+  left: 5%;
+  height: 269px;
+  bottom: -40%;
+}
+
+#proj3 {
+  bottom: -10%;
+  height: 277px;
+}
+
+#proj1 .outline {
+  left: 8px;
+  top: -6px;
+}
+
+#proj1 img, #proj1 h3 {
+  transform: translateX(20px) translateY(10px);
+  width: 100%;
+}
+
+#proj2 .outline {
+  left: -6px;
+  top: -3px;
+}
+
+.outline {
+  position: absolute;
+  border: 1px solid var(--h-subcolor);
+  width: 100%;
+  height: 100%;
+}
+
+#proj2 img, #proj2 h3 {
+  transform: translateX(4px) translateY(-11px);
+  width: 100%;
+}
+
+#proj3 .outline {
+  left: 6px;
+  top: 3px;
+}
+
+#proj3 img, #proj3 h3 {
+  transform: translateX(1px) translateY(-3px);
+  width: 100%;
+}
+
+.resume-button {
+  float: left;
+  position: relative;
+  left: 12.5%;
+
+  background-color: var(--h-color);
+}
+footer {
+  text-align: center;
+  height: 50px;
+  opacity: .6;
+}
+
+@media screen and (max-width: 991px) {
+  section .circle {
+    opacity: .6;
+  }
+}
+
+.blink_me {
+  color: var(--h-subcolor);
+  animation: blinker 1s linear infinite;
+  letter-spacing: 0;
+}
+
+@keyframes blinker {
+  0%, 51% {
+    opacity: 100;
+  }
+
+  1%, 50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 899px) {}

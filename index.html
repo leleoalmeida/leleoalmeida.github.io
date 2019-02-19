@@ -1,20 +1,110 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leo - UX Designer</title>
 
-<title>L E L E O</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Roboto+Mono">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" type="text/css" href="./css/example.css">
-
-<script src="https://use.typekit.net/kjn8nzn.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
+  <script type="text/javascript" src="rellax.min.js"></script>
+  <base target="_blank">
 </head>
 
-<body class="bgimg">
+<body>
 
+  <div id="grid">
+    <div class="content-wrap">
+      <div class="grid-col"></div>
+      <div class="grid-col"></div>
+      <div class="grid-col"></div>
+      <div class="grid-col"></div>
+
+    </div>
+  </div>
+
+  <header>
+    <div class="content-wrap rellax" data-rellax-speed="-6">
+      <div class="intro">
+        <h1>Hello!
+          <br>
+          I am <span style="color: var(--h-subcolor)">Leo</span><span class="blink_me">.</span></h1>
+
+        <div class="intro-text rellax" data-rellax-speed="2">
+          <p>I am a UX Designer and Web Developer based in Den Haag, the Netherlands. I am currently studying at <a href="https://www.thehagueuniversity.com/"> The Hague University</a> and working as a freelancer on design projects.
+            <br>
+            <br>
+            Here you'll have an overview of what I do. Welcome!
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <img src="images/squiggle1.svg" id="squi1" class="rellax" data-rellax-speed="1">
+    <img src="images/squiggle2.svg" id="squi2" class="rellax" data-rellax-speed=".8">
+    <img src="images/cross1.svg" id="cross1" class="rellax" data-rellax-speed="1">
+    <img src="images/cross2.svg" id="cross2" class="rellax" data-rellax-speed=".5">
+    <img src="images/circle.svg" id="circle1" class="rellax" data-rellax-speed=".5">
+    <img src="images/circle.svg" id="circle2" class="rellax" data-rellax-speed="1">
+  </header>
+
+
+  <div class="content-wrap">
+
+    <div class="projects rellax">
+      <h2>Cool projects</h2>
+      <div id="proj1">
+        <div class="outline">
+
+        </div>
+        <img src="images/mindmakers.jpg" alt="">
+        <h3><a href="#">Mind Makers</a></h3>
+      </div>
+
+      <div id="proj2" class="rellax">
+        <div class="outline">
+
+        </div>
+        <img src="images/profile.jpg" alt="">
+        <h3><a href="#">Productivity Hub</a></h3>
+      </div>
+
+      <div id="proj3">
+        <div class="outline">
+
+        </div>
+        <a href="#"> <img src="images/profile.jpg" alt=""></a>
+        <h3><a href="#">Bespoke Design</a></h3>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="content-wrap">
+
+    <div class="cv">
+      <h2>Good ol' CV</h2>
+      <h3>If you'd like to see my résumé, just click on the button below.</h3>
+      <a href="#">
+        <div class="resume-button">
+          <div class="outline">
+
+          </div>
+          <h3>Download me!</h3>
+        </div>
+      </a>
+    </div>
+
+  </div>
 </body>
+
+
+<script>
+  // Accepts any class name
+  var rellax = new Rellax('.rellax');
+</script>
+
 </html>

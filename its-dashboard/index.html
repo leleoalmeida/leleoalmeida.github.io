@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ITS Dashboard</title>
+  <script type="text/javascript" src="scripts/main.js"> </script>
+  <link rel="stylesheet" href="styles/mystyle.css">
+</head>
+
+<body>
+  <h1>ITS Dashboard</h1>
+  <div class="content-grid">
+
+    <div class="parameters-box">
+
+      <div class="fuel-gauge">
+        <p id="fuel-text"></p>
+        <div id="fuel-level" style="height: 100%;">
+
+        </div>
+      </div>
+      <div class="throttle-gauge" style="text-align: center;">
+        <p id="throttle-text"></p>
+        <div id="throttle-level" style="height: 100%; background-color: red;">
+
+        </div>
+        <button type="button" onclick="throttleDown()">
+          <</button> <button type="button" onclick="throttleUp()">>
+        </button>
+      </div>
+
+      <div class="acceleration-gauge">
+        <p id="acceleration-text"></p>
+
+      </div>
+
+      <div class="speed-gauge">
+        <p id="speed-text"></p>
+
+      </div>
+
+    </div>
+    <div class="environment-box">
+      <p>Error 993.<br>Please contact ground crew before lift-off.</p>
+    </div>
+
+    <div class="supplies-box">
+      <p>Error 993.<br>Please contact ground crew before lift-off.</p>
+    </div>
+    <div class="metrics-box">
+      <div class="gravity-converter">
+        <input id="grav-input" type="text" name="grav-converter" placeholder="Input weight in kg">
+        <button id="grav-button" type="button" name="convert" onclick="convertGravity()">Convert!</button>
+        <p id="grav-text"></p>
+
+      </div>
+      <div class="miles-converter">
+        <input id="miles-input" type="text" name="grav-converter" placeholder="Input miles...">
+        <button id="miles-button" type="button" name="convert" onclick="convertMiles()">Convert!</button>
+        <p id="miles-text"></p>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+    fuelGauge();
+    throttleGauge();
+  </script>
+</body>
+
+</html>

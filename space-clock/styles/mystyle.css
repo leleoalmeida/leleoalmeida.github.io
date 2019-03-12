@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  min-height: 1vh;
+  width: 100%;
+  background-color: #aa4444;
+  font-family: 'Space Mono', monospace;
+  color: white;
+}
+
+p {
+  margin: 0;
+  font-size: 1vw;
+}
+
+.content {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto [title-start clock-start] auto [title-end clock-end] auto;
+  grid-template-rows: auto [title] 3vw [clock-start] 18vw [clock-end title-compensate] 3vw auto;
+}
+
+.toggle {
+  grid-column: title-start / title-end;
+  grid-row: title / clock-start;
+  text-align: right;
+}
+
+.clock-type {
+  grid-column: title / span toggle-start;
+  grid-row: title / clock-start;
+}
+
+.change-theme {
+  grid-column: title-start / title-end;
+  grid-row: title-compensate / 5;
+  text-align: right;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+.digital-clock {
+  grid-column: clock-start / clock-end;
+  grid-row: clock-start / clock-end;
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 1vw;
+}
+
+.clock-type p, .toggle p {
+  line-height: 3vw;
+}
+
+.digital-clock p {
+  line-height: 18vw;
+  font-size: 16vw;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch {
+  transform: translateY(25%);
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 2rem;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: .05rem solid white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  left: .225rem;
+  bottom: .225rem;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.clock-type, .toggle {
+  animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+.digital-clock {
+  animation: .6s ease-out 0s 1 slideInFromTop;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-200px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

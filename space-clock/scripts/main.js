@@ -17,6 +17,7 @@ function startTime() {
   var h = clock.getHours();
   var m = clock.getMinutes();
   var s = clock.getSeconds();
+  h = checkTime(h);
   m = checkTime(m);
   s = checkTime(s);
 

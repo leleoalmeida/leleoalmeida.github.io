@@ -17,7 +17,7 @@ p {
   position: relative;
   display: grid;
   grid-template-columns: auto [title-start clock-start] auto [title-end clock-end] auto;
-  grid-template-rows: auto [title] 3vw [clock-start] 18vw [clock-end title-compensate] 3vw auto;
+  grid-template-rows: auto [title] 6vh [clock-start] 30vh [clock-end title-compensate] 6vh auto;
 }
 
 .toggle {
@@ -35,6 +35,7 @@ p {
   grid-column: title-start / title-end;
   grid-row: title-compensate / 5;
   text-align: right;
+  line-height: 6vh;
 }
 
 a {
@@ -51,11 +52,11 @@ a {
 }
 
 .clock-type p, .toggle p {
-  line-height: 3vw;
+  line-height: 6vh;
 }
 
 .digital-clock p {
-  line-height: 18vw;
+  line-height: 30vh;
   font-size: 16vw;
 }
 
@@ -109,20 +110,14 @@ input:checked+.slider:before {
   transform: translateX(26px);
 }
 
-.clock-type, .toggle {
-  animation: 1s ease-out 0s 1 slideInFromTop;
-}
+#theme-change {
+  width: 150px;
+  height: 3vh;
 
-.digital-clock {
-  animation: .6s ease-out 0s 1 slideInFromTop;
-}
-
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-200px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+  background-color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 5px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  color: #aa4444;
 }

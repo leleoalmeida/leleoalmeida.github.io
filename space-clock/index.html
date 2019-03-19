@@ -7,13 +7,13 @@
   <script src="scripts/main.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
   <link rel="stylesheet" href="styles/mystyle.css">
-  <script type="text/javascript" src="scripts/main.js">
-
+  <script type="text/javascript" src="TweenMax.min.js">
   </script>
+  <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 
 <body>
-  <div class="content">
+  <div class="content" id="content">
     <div class="clock-type">
       <p id="clock-text"></p>
     </div>
@@ -28,12 +28,21 @@
     <div class="digital-clock">
       <p id="digital-clock">13:13</p>
     </div>
-<div class="change-theme">
-  <a onclick="changeTheme()" id="theme-change">Change theme</a>
-</div>
+    <div class="change-theme">
+      <button onclick="changeTheme()" id="theme-change">Change Theme</button>
+    </div>
   </div>
   <script type="text/javascript">
     startTime();
+  </script>
+  <script type="text/javascript" src="TweenMax.min.js"></script>
+  <script type="text/javascript">
+    var content = document.getElementById("content");
+    var tl1 = new TimelineMax();
+    tl1.from(content, 1.5, {
+      top: -800,
+      ease: Bounce.easeOut
+    });
   </script>
 </body>
 

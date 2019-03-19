@@ -52,12 +52,13 @@ function checkTime(i) {
   };
   return i;
 }
-function changeTheme(){
-  if (theme == 1) {
-    document.getElementsByTagName("body")[0].style.backgroundColor = '#005288';
-    theme = 2;
+
+function changeTheme() {
+  if (theme == 0) {
+    document.body.style.backgroundColor = '#005288';
+    theme++;
   } else {
-    document.getElementsByTagName("body")[0].style.backgroundColor = '#aa4444';
-    theme = 1;
+    document.body.style.backgroundColor = '#aa4444';
+    theme--;
   }
 }

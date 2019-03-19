@@ -16,7 +16,7 @@ p {
   min-height: 100vh;
   position: relative;
   display: grid;
-  grid-template-columns: auto [title-start clock-start] auto [title-end clock-end] auto;
+  grid-template-columns: auto [title-start clock-start] auto [title-end clock-end];
   grid-template-rows: auto [title] 6vh [clock-start] 30vh [clock-end title-compensate] 6vh auto;
 }
 
@@ -120,4 +120,11 @@ input:checked+.slider:before {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
   color: #aa4444;
+}
+
+#aliens {
+  width: 100px;
+  position: fixed;
+  top: 100px;
+  left: 10%;
 }

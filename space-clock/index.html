@@ -13,6 +13,8 @@
 </head>
 
 <body>
+  <img src="./images/alien.png" id="aliens" alt="">
+
   <div class="content" id="content">
     <div class="clock-type">
       <p id="clock-text"></p>
@@ -43,6 +45,24 @@
     tl1.from(content, 1.5, {
       top: -800,
       ease: Bounce.easeOut
+    });
+
+    var aliens = document.getElementById("aliens");
+    var tl2 = new TimelineMax();
+    tl2.from(aliens, 4, {
+      rotation: 60,
+      ease: Power1.easeInOut,
+      repeat: -1,
+      yoyo: true
+    });
+
+    var aliens = document.getElementById("aliens");
+    var tl3 = new TimelineMax();
+    tl3.from(aliens, 10, {
+      left: '80%',
+      ease: Power1.easeInOut,
+      repeat: -1,
+      yoyo: true
     });
   </script>
 

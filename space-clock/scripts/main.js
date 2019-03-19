@@ -57,9 +57,11 @@ var theme = 0;
 function changeTheme() {
   if (theme == 0) {
     document.body.style.backgroundColor = '#005288';
+    document.getElementById('aliens').src = "./images/ufo.png";
     theme++;
   } else {
     document.body.style.backgroundColor = '#aa4444';
+    document.getElementById('aliens').src = "./images/alien.png";
     theme--;
   }
 }

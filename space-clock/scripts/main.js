@@ -1,4 +1,3 @@
-var theme = 1;
 
 function h_to_hms(h) {
   var x = h * 3600;
@@ -48,10 +47,12 @@ function startTime() {
 
 function checkTime(i) {
   if (i < 10) {
-    i = "0" + i
-  };
+    i = "0" + i};
   return i;
 }
+
+var theme = 0;
+
 
 function changeTheme() {
   if (theme == 0) {

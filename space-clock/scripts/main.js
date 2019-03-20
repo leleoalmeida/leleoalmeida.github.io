@@ -58,10 +58,14 @@ function changeTheme() {
   if (theme == 0) {
     document.body.style.backgroundColor = '#005288';
     document.getElementById('aliens').src = "./images/ufo.png";
+    document.getElementById('theme-change').style.color = '#005288';
     theme++;
   } else {
     document.body.style.backgroundColor = '#aa4444';
     document.getElementById('aliens').src = "./images/alien.png";
+    document.getElementById('theme-change').style.color = '#aa4444';
     theme--;
   }
 }
+var clock = new Date();
+console.log(clock.getDay());

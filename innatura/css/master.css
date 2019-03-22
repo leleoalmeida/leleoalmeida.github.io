@@ -1,0 +1,49 @@
+body {
+  min-width: 100vw;
+  display: block;
+  background-color: #f4f1e4;
+  color: #726d54;
+}
+
+.content-wrap {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.content {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contato {
+
+  font-size: 3rem;
+}
+header {
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+
+}
+
+p {
+  font-size: 1.3rem;
+}

@@ -34,6 +34,7 @@ body {
   height: 100vh;
   width: 100%;
   position: fixed;
+  z-index: -1;
 }
 
 .content-wrap {
@@ -94,8 +95,16 @@ h2 {
   font-size: 70px;
 }
 
+.project-highlight h2 {
+margin-bottom: 0;
+}
+
 .projects h3 {
   margin: 0;
+}
+
+.project-text {
+  grid-column:
 }
 
 .resume-button h3 {
@@ -153,6 +162,13 @@ header img {
 }
 
 .projects {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  float: right;
+}
+
+.project-highlight {
   height: 100%;
   width: 100%;
   text-align: center;

@@ -44,6 +44,12 @@ body {
   height: 100vh;
 }
 
+.projects-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .grid-col {
   opacity: .2;
   border-left: 1px solid #000;
@@ -96,7 +102,7 @@ h2 {
 }
 
 .project-highlight h2 {
-margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .projects h3 {
@@ -232,17 +238,29 @@ header img {
   width: 100%;
 }
 
+.cv {
+  padding-bottom: 200px;
+}
+
 .resume-button {
   float: left;
   position: relative;
   left: 12.5%;
-
   background-color: var(--h-color);
 }
+
 footer {
   text-align: center;
-  height: 50px;
-  opacity: .6;
+  height: 100px;
+  width: 100% !important;
+  opacity:;
+  background-color: var(--h-color);
+  line-height: 100px;
+  margin-bottom: 0;
+}
+
+footer, p {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 991px) {

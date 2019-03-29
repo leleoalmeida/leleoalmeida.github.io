@@ -187,7 +187,6 @@ header img {
   width: 25%;
   left: 12.5%;
   height: 290px;
-  background-color: var(--h-color);
 }
 
 #proj2 {
@@ -216,11 +215,45 @@ header img {
   top: -3px;
 }
 
+#proj1:hover>.outline {
+  transform: translate(10px,10px);
+}
+
+#proj1:hover>.proj-bg {
+  transform: scale(.95);
+}
+
+#proj2:hover>.outline {
+  transform: translate(-10px,5px);
+}
+
+#proj2:hover>.proj-bg {
+  transform: scale(.95);
+}
+
+#proj3:hover>.outline {
+  transform: translate(10px,-10px);
+}
+
+#proj3:hover>.proj-bg {
+  transform: scale(.95);
+}
+
 .outline {
   position: absolute;
   border: 1px solid var(--h-subcolor);
   width: 100%;
   height: 100%;
+  transition: 0.8s;
+}
+
+.proj-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--h-color);
+
+  transition: 0.8s;
 }
 
 #proj2 img, #proj2 h3 {
@@ -242,20 +275,29 @@ header img {
   padding-bottom: 200px;
 }
 
+.contact {
+  text-align: right;
+  margin-bottom: 100px;
+}
+
 .resume-button {
   float: left;
   position: relative;
   left: 12.5%;
   background-color: var(--h-color);
+  transition: 0.3s;
+}
+
+.resume-button:hover > .outline {
+  transform: translate(5px,-5px);
 }
 
 footer {
   text-align: center;
-  height: 100px;
   width: 100% !important;
-  opacity:;
+  opacity: ;
   background-color: var(--h-color);
-  line-height: 100px;
+  line-height: 20px;
   margin-bottom: 0;
 }
 

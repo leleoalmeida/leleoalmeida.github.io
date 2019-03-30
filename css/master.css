@@ -25,7 +25,7 @@ body {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   grid-template-rows: auto min-content 70px min-content auto;
 }
 
@@ -177,9 +177,8 @@ header span {
 
 #out-button {
   width: 240px;
-  ;
   height: 60px;
-  z-index: 2;
+  z-index: -1;
 }
 
 .download-button {
@@ -234,11 +233,6 @@ h2 {
 
 .project-highlight h2 {
   margin-bottom: 0;
-}
-
-.resume-button h3 {
-  margin-left: 40px;
-  margin-right: 40px;
 }
 
 header img {
@@ -296,24 +290,15 @@ header img {
   text-align: right;
 }
 
-.resume-button {
-  float: left;
-  position: relative;
-  left: 12.5%;
-  background-color: var(--h-color);
-  transition: 0.3s;
-}
-
-.resume-button:hover>.outline {
+.download-button:hover>.outline {
   transform: translate(5px, -5px);
 }
 
 footer {
   text-align: center;
   width: 100% !important;
-  opacity: ;
   background-color: var(--h-color);
-  line-height: 20px;
+  line-height: 40px;
   margin-bottom: 0;
 }
 
@@ -321,14 +306,7 @@ footer, p {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 991px) {
-  section .circle {
-    opacity: .6;
-  }
-}
-
 .blink_me {
-  color: var(--h-subcolor);
   animation: blinker 1s linear infinite;
   letter-spacing: 0;
 }
@@ -348,16 +326,78 @@ footer, p {
     transform: translate3d(0, 0, 0) !important;
   }
 
+  #lines {
+    display: none;
+  }
+
+  .grid-layout, .projects-grid {
+    grid-template-columns: auto min-content auto;
+  }
+
+  header {
+
+    grid-template-rows: auto min-content 30px min-content auto;
+  }
+
+  .proj1, .proj2, .proj3 {
+    grid-column: 2 / 3;
+  }
+
+  .proj1 {
+    grid-row: 4 / 5
+  }
+  .proj2 {
+    grid-row: 6 / 7
+  }
+  .proj3 {
+    grid-row: 8 / 9
+  }
+.projects-grid {
+  height: auto;
+  grid-template-rows: 100px min-content 30px min-content 30px min-content 30px min-content;
+}
+
+.cv, .contact {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.cv h2, .cv p {
+  margin: 10px 0;
+}
+
+.download-button {
+  width: 100%;
+}
+
+.download-button h3 {
+  border: 1px solid var(--h-subcolor);
+
+}
+
+#out-button {
+  display: none;
+}
+
+  #projects-title {
+    grid-column: 1 / 4;
+  }
+
+  #hello-leo {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  #intro-leo {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+
   .intro {
     float: none;
     margin: 0 auto;
     width: 100%;
     padding: 5%;
-  }
-
-  .intro-text {
-    left: 0;
-    line-height: 1.5;
   }
 
   h2 {

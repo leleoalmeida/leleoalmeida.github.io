@@ -65,7 +65,7 @@ var long;
 
 
 (function() {
-  var url = "https://api.open-notify.org/iss-now.json";
+  var url = "http://api.open-notify.org/iss-now.json";
 
   fetch(url).then(function(response) {
     return response.json();

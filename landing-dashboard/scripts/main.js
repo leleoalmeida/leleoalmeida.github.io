@@ -4,7 +4,7 @@ var map;
 var shipsArray = new Array(15, 59, 10, 11, 12, 13, 21, 22, 23, 27, 28, 29, 31, 39, 40, 41, 43, 47, 48, 49, 3, 59, 61, 77, 17, 32, 52, 58, 63, 64, 65, 66, 74, 75, 2, 68)
 
 document.getElementById("weather-button").addEventListener("click", checkWeather);
-document.getElementById("ship-name").addEventListener("click", shipName);
+document.getElementById("shipname").addEventListener("click", shipName);
 
 function checkWeather() {
   var url = "http://api.openweathermap.org/data/2.5/weather";
@@ -23,7 +23,7 @@ function checkWeather() {
       var temperatureStatus = response.main.temp;
 
       document.getElementById('temp-handle').innerHTML = 'Weather in ' + document.getElementById('location').value + ', ' + response.sys.country + ':';
-      document.getElementById('weather').innerHTML = (temperatureStatus - 273, 15) + '&#176 C ' + weatherStatus;
+      document.getElementById('weather').innerHTML = Math.floor(temperatureStatus - 273.15) + '&#176 C ' + weatherStatus;
 
       var marker2 = new google.maps.Marker({
         position: {

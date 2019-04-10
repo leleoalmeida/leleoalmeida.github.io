@@ -1,0 +1,352 @@
+@font-face {
+  font-family: "TRY Vesterbro";
+  font-weight: normal;
+  src: url("../fonts/TRY_Vesterbro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "TRY Vesterbro";
+  font-weight: 700;
+  src: url("../fonts/TRY_Vesterbro-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "TRY Vesterbro";
+  font-weight: 900;
+  src: url("../fonts/TRY_Vesterbro-Poster.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'GT America Mono';
+  src: url("../fonts/GT-America-Mono-Regular.eot");
+  font-weight: 400;
+  font-style: normal
+}
+
+html, body {
+  width: 100%;
+  background: #f3f4f4;
+  font-size: 20px;
+  margin: 0;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+body {
+  width: 100%;
+  background: #f3f4f4;
+  font-size: 20px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 6rem 2rem [header-before-start] 2rem 10rem 10rem 10rem 10rem [header-before-end] 2rem 2rem 6rem auto;
+  grid-template-rows: [entry-image-start] minmax(2rem, 1fr) [entry-header-start] 2rem [entry-cat-start] 2rem [entry-title-start] auto [entry-image-end entry-title-end entry-lede-start] auto [entry-byline-start] auto minmax(0, 2rem) [entry-header-end] 4rem;
+}
+
+.entry-header {
+  display: grid;
+  grid-template-columns: auto [text-wrap-start header-before-start] 2rem [text-start] minmax(2rem, 12rem) [text-q1-end content-t1-end] 2rem [text-q2-start content-t2-start] minmax(2rem, 12rem) [text-q2-end content-half1-end] 2rem [content-half2-start text-q3-start] minmax(2rem, 12rem) [text-q3-end content-t2-end] 2rem [header-before-end] auto;
+  grid-template-rows: 2rem [entry-title] minmax(2rem, 1fr) [entry-description] 2rem 2rem [button-line1-start] 6rem [entry-image-end entry-title-end entry-lede-start] 2rem [button-line2-start] 6rem 2rem 6rem minmax(0, 2rem) [entry-header-end];
+}
+
+.video-div, table, .prototype {
+  grid-column: text-start / text-end;
+  text-align: center;
+}
+
+.prototype iframe {
+
+    border: 3px solid #ff5c50;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 1rem;
+
+  font-family: "TRY Vesterbro", serif;
+}
+
+table img {
+  width: 100%;
+}
+
+
+.end-week {
+  grid-column: line-start / line-end;
+  text-align: center;
+  margin-top: 100px;
+  border-top: 1px solid black;
+  font-family: "TRY Vesterbro", serif;
+}
+
+.entry-title {
+  grid-column: 3 / 9;
+  grid-row: 2;
+  margin-bottom: 0;
+}
+
+.entry-description {
+  grid-column: 3 / 9;
+  grid-row: 3;
+  color: black;
+  z-index: 2;
+  font-family: 'GT America Mono', monospace;
+}
+
+header:before {
+  content: "";
+  grid-column: header-before-start / header-before-end;
+  grid-row-start: 2;
+  grid-row-end: entry-header-end;
+  background-color: white;
+  width: auto;
+  z-index: 1;
+}
+
+header:after {
+  background-color: #ff5c50;
+  content: "";
+  grid-column: header-before-start / header-before-end;
+  grid-row-start: 2;
+  grid-row-end: entry-header-end;
+  z-index: -0;
+  width: auto;
+  transform: translate(.5rem, .5rem);
+  border-radius: .02rem;
+  z-index:
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.week-button {
+  color: white;
+  font-family: 'GT America Mono', monospace;
+  background-color: #ff5c50;
+  text-align: center;
+  display: grid;
+  z-index: 2;
+  padding: 5px;
+  font-size: 30px;
+}
+
+p .week-text-small {
+  font-size: 16px;
+}
+
+#week1, #week2, #week3 {
+  grid-row: 5 / 6;
+}
+
+#week4, #week56, #week78 {
+  grid-row: 7 / 8;
+}
+
+#week1, #week4 {
+  grid-column: 3 / 4;
+}
+
+#week2, #week56, #final {
+  grid-column: 5 / 6;
+}
+
+#week3, #week78 {
+  grid-column: 7 / 8;
+}
+
+#final {
+  grid-row: 9 / 10;
+}
+
+.week {
+  color: white;
+  font-family: 'GT America Mono', monospace;
+  background-color: #ff5c50;
+  text-align: center;
+  display: grid;
+  grid-column: 5/6;
+  grid-row: 3 / 4;
+  z-index: 2;
+}
+
+.week p, .week-back p, .week-next p {
+  margin: auto 0;
+}
+
+.week-back {
+  grid-column: 2 / 3;
+  grid-row: entry-cat-start;
+  color: white;
+  font-family: 'GT America Mono', monospace;
+  background-color: #ff5c50;
+  text-align: center;
+  display: grid;
+  z-index: 2;
+}
+
+.week-next {
+  grid-column: 11 / 12;
+  grid-row: entry-cat-start;
+  color: white;
+  font-family: 'GT America Mono', monospace;
+  background-color: #ff5c50;
+  text-align: center;
+  display: grid;
+  z-index: 2;
+}
+
+h1 {
+  grid-column: 5 / 9;
+  grid-row: entry-title-start;
+  font-family: 'TRY Vesterbro Poster', serif;
+  font-size: 2.1rem;
+  line-height: 1.165;
+  font-weight: 900;
+  letter-spacing: .02em;
+  z-index: 2;
+}
+
+.portfolio-text {
+  display: grid;
+  grid-template-columns: [bleed-start] minmax(1rem, 1fr) [widest-start] minmax(1rem, 1fr) [content-start content-half1-start content-t1-start] minmax(2rem, 8rem) [text-wrap-start] 2rem [text-start] minmax(2rem, 8rem) [line-start text-q1-end content-t1-end] 2rem [text-q2-start content-t2-start] minmax(2rem, 8rem) [text-q2-end content-half1-end] 1rem [middle-line] 1rem [content-half2-start text-q3-start] minmax(2rem, 8rem) [text-q3-end content-t2-end] 2rem [text-q4-start content-t3-start line-end] minmax(2rem, 8rem) [text-q4-end text-end] 2rem [text-wrap-end] minmax(2rem, 8rem) [content-t3-end content-half2-end content-end] minmax(1rem, 1fr) [widest-end] minmax(1rem, 1fr) [bleed-end];
+  grid-template-rows: auto;
+}
+
+figure {
+  font-family: 'TRY_Vesterbro';
+  text-align: center;
+  font-size: 12px;
+  width: auto;
+  margin: 30px;
+}
+
+figure img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  object-position: bottom;
+
+}
+
+article h2 {
+  font-family: 'TRY Vesterbro';
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.5;
+  grid-column: text-start / text-end;
+  text-decoration: underline;
+  text-decoration-color: #ff5c50;
+}
+
+article h3 {
+  font-family: 'TRY Vesterbro';
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 1.5;
+  grid-column: text-start / text-end;
+  margin-bottom: 0;
+}
+
+article p {
+  font-family: 'TRY Vesterbro';
+  font-size: 20px;
+  line-height: 1.5;
+  grid-column: text-start / text-end;
+}
+
+article .article-list {
+  font-family: 'TRY Vesterbro';
+  font-size: 20px;
+  line-height: 1.5;
+  grid-column: text-start / text-end;
+  margin-top: 0;
+}
+
+article p:first-of-type, article h2:first-of-type {
+  margin-top: 0;
+}
+
+.sidebar {
+  position: sticky;
+  font-family: 'GT America Mono', monospace;
+  font-size: 14px;
+  padding: 0;
+  left: 11%;
+  top: 0.7rem;
+  min-height: 0;
+  grid-row: 1 / span 2;
+}
+
+li:first-of-type {
+  margin-top: 0;
+}
+
+.sidebar-item {
+  margin: 0.5rem 0;
+}
+
+.sidebar a:visited, .sidebar a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  margin-top: 200px;
+  height: 50px;
+  background-color: #ff5c50;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'GT America Mono', monospace;
+  font-size: 12px;
+  line-height: 50px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #ffffff99;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  height: 80%;
+  max-width: 1000px;
+}
+
+#img01 {
+  border: 3px solid #ff5c50;
+}
+
+figcaption {
+  /* transform: translateY(-40px);
+  font-size: 30px;
+
+  padding: 5px;
+  color: #f3f4f4; */
+  font-family: 'GT America Mono', monospace;
+  text-align: left;
+}
+
+.grid-left {
+  grid-column: 5 / 8;
+}
+
+.grid-center {
+  grid-column: 7 / 11;
+}
+
+.grid-right {
+  grid-column: 10 / 13;
+}

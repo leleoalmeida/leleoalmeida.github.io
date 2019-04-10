@@ -96,6 +96,27 @@ header span {
   grid-area: 10 / 4 / 15 / 6;
 }
 
+.project-title, .project-subtext, .project-text {
+  grid-column: 2 / 10;
+}
+
+.project-title {
+  grid-row: 2 / 3;
+}
+
+.project-subtext {
+  grid-row-start: 3
+}
+
+.project-text {
+  text-align: left;
+  grid-row-start: 4
+}
+
+.project-text p {
+  margin-top: 20px;
+}
+
 .outline {
   width: 240px;
   height: 290px;
@@ -236,7 +257,7 @@ h2 {
 }
 
 header img {
-  width: 80px;
+  width: 80px !important;
   position: fixed;
   z-index: -1;
   opacity: 0.5;
@@ -272,26 +293,15 @@ header img {
   left: 80%;
 }
 
-.projects {
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  float: right;
-}
-
-.project-highlight {
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  float: right;
-}
-
 .contact {
   text-align: right;
 }
 
 .download-button:hover>.outline {
   transform: translate(5px, -5px);
+}
+#contact-details {
+  line-height: 2;
 }
 
 footer {
@@ -335,7 +345,6 @@ footer, p {
   }
 
   header {
-
     grid-template-rows: auto min-content 30px min-content auto;
   }
 
@@ -346,38 +355,42 @@ footer, p {
   .proj1 {
     grid-row: 4 / 5
   }
+
   .proj2 {
     grid-row: 6 / 7
   }
+
   .proj3 {
     grid-row: 8 / 9
   }
-.projects-grid {
-  height: auto;
-  grid-template-rows: 100px min-content 30px min-content 30px min-content 30px min-content;
-}
 
-.cv, .contact {
-  width: 80%;
-  margin: 50px auto;
-}
+  .projects-grid {
+    height: auto;
+    grid-template-rows: 100px min-content 30px min-content 30px min-content 30px min-content;
+  }
 
-.cv h2, .cv p {
-  margin: 10px 0;
-}
+  .cv, .contact {
+    width: 80%;
+    margin: 50px auto;
+  }
 
-.download-button {
-  width: 100%;
-}
+  .cv h2, .cv p {
+    margin: 10px 0;
+  }
 
-.download-button h3 {
-  border: 1px solid var(--h-subcolor);
+  .download-button {
+    width: 100%;
+  }
 
-}
+  .download-button h3 {
+    border: 1px solid var(--h-subcolor);
+  }
 
-#out-button {
-  display: none;
-}
+
+
+  #out-button {
+    display: none;
+  }
 
   #projects-title {
     grid-column: 1 / 4;

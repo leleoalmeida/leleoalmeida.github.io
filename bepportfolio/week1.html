@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Week 1 - Building Engaging Prototypes | Leonardo Almeida</title>
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="script.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+  <div id="myModal" class="modal" onclick="this.style.display= 'none'">
+    <img class="modal-content" id="img01">
+  </div>
+
+  <header>
+    <a class="week-next" href="week2.html">
+      <p>></p>
+    </a>
+    <a href="index.html" class="week">
+      <p>WEEK 1</p>
+    </a>
+
+
+    <h1>Low-fidelity prototyping</h1>
+  </header>
+  <article class="portfolio-text">
+    <ul class="sidebar" type="none">
+      <li class="sidebar-item"><a href="#introduction">Introduction</a></li>
+      <li class="sidebar-item"><a href="#prototypes">Prototypes</a></li>
+      <li class="sidebar-item"><a href="#evaluation">Evaluation</a></li>
+      <li class="sidebar-item"><a href="#findings">Findings</a></li>
+      <li class="sidebar-item"><a href="#reflection">Reflection</a></li>
+    </ul>
+
+
+
+
+    <h2 id="introduction">Introduction</h2>
+    <p>This assignment consisted of building a paper prototype for a fitness tracker application for a smartphone and a smartwatch. The application should at least be able to:</p>
+    <ul class="article-list">
+      <li>start and stop tracking in response to user’s input;</li>
+      <li>track the burned calories, traveled distance, and current speed;</li>
+      <li>display this information in real time to the user;</li>
+      <li>display tracked data per day / week / month.</li>
+    </ul>
+    <p>After the initial prototype was made, it was evaluated by fellow colleagues and adjusted according to feedback. </p>
+
+
+    <h2 id="prototypes">Prototypes</h2>
+
+    <p>I decided to create my prototypes around cutout pieces of paper that resemble the devices’ actual height and width, so it is easier to size buttons and information around the screen.</p>
+    <p> On both prototypes the screens are displayed by sliding a piece of paper left or right.</p>
+
+    <figure class="grid-left">
+      <img src="images/mobile_overview.jpg" onclick="openImage(this.src)">
+
+      <figcaption>Mobile screen. (click to enlarge)</figcaption>
+    </figure>
+    <figure class="grid-right">
+      <img src="images/watch_overview.jpg" onclick="openImage(this.src)">
+
+      <figcaption>Watch screen. (click to enlarge)</figcaption>
+    </figure>
+
+
+    <p><b>Initial prototypes</b><br>The first prototypes were made for the wearable device, following a progressive enhancement approach. Its main screen displays the current date and time, the user’s burnt calories, the daily distance walked and
+      the current speed. Also, on the main screen the user has access to other functionalities by tapping 4 buttons.</p>
+
+    <figure class="grid-left">
+      <img src="images/mobileall.jpg" onclick="openImage(this.src)">
+
+      <figcaption>Overview of all mobile screens.</figcaption>
+    </figure>
+    <figure class="grid-right">
+      <img src="images/watchall.jpg" onclick="openImage(this.src)">
+
+      <figcaption>Overview of all watch screens.</figcaption>
+    </figure>
+
+    <p>Tapping on the NAV button will take the user to a map, not only displaying its position but also giving the opportunity to guide the user to a certain location. <br><br>
+      Tapping on the MUSIC button takes the user to the player screen. An image with the current song’s cover is displayed, as well as buttons to pause, skip and back.<br><br>
+      Tapping on the DATA button, the user is asked to select a time span: daily, weekly or monthly. Selecting one of these will take the user to a screen where data is displayed in form of graphs.<br><br>
+      Lastly, the user can tap on the STOP TRACKING button to stop tracking its activity.</p>
+
+
+    <p><b>Post feedback prototypes</b><br>
+      After the feedback sessions I redesigned the interfaces following what my peers told me that could be changed. Now the watch screen has better information display and the different buttons can be accessed by swiping left or right, like a web
+      carousel:</p>
+    <figure class="grid-left">
+      <img src="images/watchfeedback.jpg" onclick="openImage(this.src)">
+
+      <figcaption>The watch home screen changed after feedback.</figcaption>
+    </figure>
+    <h2 id="evaluation">Evaluation</h2>
+
+    <p>The prototypes were tested by asking a classmate to perform the following tasks:</p>
+    <ul class="article-list">
+      <li>See your weekly report;</li>
+      <li>Access the navigation menu;</li>
+      <li>Stop tracking;</li>
+
+    </ul>
+    <p>
+      These tasks gave me insights on both features that I could be missing and also tips on how to make the UI better.</p>
+    <h2 id="findings">Findings</h2>
+    <p>Some feedback given by my peers included:<br>
+<br>
+      <b>Mobile version</b></p>
+    <ul class="article-list">
+
+      <li>The menu is taking too much space;</li>
+      <li>Information displayed could take more space and be better spaced.</li>
+    </ul>
+
+    <p><b>Watch version</b></p>
+    <ul class="article-list">
+
+      <li>Nav and Music buttons are way too small;</li>
+      <li>Buttons in general area a bit small;</li>
+      <li>Is the “stop tracking” needed on the home screen?</li>
+    </ul>
+
+<h2 id="reflection">Reflection</h2>
+  <p>Prototyping for a small screen such as the watch was very challenging, but it showed me how important it is to consider different screen sizes when doing UI design.</p>
+    <p>
+    I was already familiarized with the “progressive enhancement” approach, but that usually applies from mobile to desktop. This activity showed me a different side to this approach that I haven’t had the chance of exploring.</p>
+
+
+
+    <div class="end-week">
+      <p><i>END OF ENTRY</i></p>
+    </div>
+
+  </article>
+  <footer><a href="http://leleo.com.br">&hearts;2019 Leleo</a></footer>
+
+
+</body>
+
+</html>

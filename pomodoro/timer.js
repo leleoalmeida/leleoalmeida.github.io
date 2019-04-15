@@ -1,91 +1,36 @@
-class Stopwatch {
-      constructor(display, results) {
-          this.running = false;
-          this.display = display;
-          this.results = results;
-          this.reset();
-          this.print(this.times);
-          this.tempo = 5;
-      }
+var pomodoro = {
+  minutes: 0,
+  seconds: 0,
+  start: false,
+  work: 1500000,
+  rest: 300000
+}
 
-      start() {
-          if (!this.time) this.time = performance.now();
-          if (!this.running) {
-              this.running = true;
-              requestAnimationFrame(this.step.bind(this));
-          }
-      }
-
-      lap() {
-          let times = this.times;
-          let li = document.createElement('li');
-          li.innerText = this.format(times);
-          this.results.appendChild(li);
-      }
-
-      stop() {
-          this.running = false;
-          this.time = null;
-      }
-
-      restart() {
-          if (!this.time) this.time = performance.now();
-          if (!this.running) {
-              this.running = true;
-              requestAnimationFrame(this.step.bind(this));
-          }
-          this.reset();
-      }
+var timerDate;
 
 
-      step(timestamp) {
-          if (!this.running) return;
-          this.calculate(timestamp);
-          this.time = timestamp;
-          this.print();
-          requestAnimationFrame(this.step.bind(this));
-      }
+function startTimer() {
+  timerDate = new Date().getTime();
+  updateDom();
+}
 
-      calculate(timestamp) {
-          var diff = timestamp - this.time;
-          // Hundredths of a second are 100 ms
-          this.times[2] += diff / 10;
-          // Seconds are 100 hundredths of a second
-          if (this.times[2] >= 100) {
-              this.times[1] += 1;
-              this.times[2] -= 100;
-          }
-          // Minutes are 60 seconds
-          if (this.times[1] >= 60) {
-              this.times[0] += 1;
-              this.times[1] -= 60;
-          }
-      }
+function updateDom() {
+  var currentTime = new Date().getTime();
 
-      print() {
-          this.display.innerText = this.format(this.times);
-      }
+  var milisLeft = timerDate + pomodoro.work;
+  console.log(milisLeft);
+  if (Math.round((milisLeft - currentTime) % 60000 / 1000) === 60) {
+    pomodoro.minutes = Math.floor((milisLeft - currentTime) / 60000 + 1);
+    pomodoro.seconds = 0;
+  } else {
+    pomodoro.minutes = Math.floor((milisLeft - currentTime) / 60000);
+    pomodoro.seconds = Math.round((milisLeft - currentTime) % 60000 / 1000);
 
-      format(times) {
-          return `\
-  ${pad0(times[0], 2)}:\
-  ${pad0(times[1], 2)}:\
-  ${pad0(Math.floor(times[2]), 2)}`;
-      }
   }
 
-  function pad0(value, count) {
-      var result = value.toString();
-      for (; result.length < count; --count)
-          result = '0' + result;
-      return result;
-  }
+  console.log(pomodoro.minutes);
+  document.getElementById('timer').innerHTML = "M: " + pomodoro.minutes + " S: " + pomodoro.seconds;
+  pomodoro.work -= 1000;
+}
 
-  function clearChildren(node) {
-      while (node.lastChild)
-          node.removeChild(node.lastChild);
-  }
-
-  let stopwatch = new Stopwatch(
-      document.querySelector('.stopwatch'),
-      document.querySelector('.results'));
+startTimer();

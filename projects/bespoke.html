@@ -2,65 +2,77 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
+  <!-- #1 '19 LELEO.COM.BR -->
+  <title>Leo - UX Designer</title>
+
+  <!-- METAS -->
+  <meta charset="UTF-8" lang="en">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="../favicon//apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon//favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../favicon//favicon-16x16.png">
-  <link rel="manifest" href="../favicon/site.webmanifest">
-  <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
-  <title>Leo - UX Designer</title>
+  <!-- FAVICONS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+  <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
 
+  <!-- GIMME DAT CSS -->
+  <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" type="text/css" href="../css/master.css">
+
+  <!-- GIMME DOSE FONTS -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Roboto+Mono">
 
-  <script type="text/javascript" src="../rellax.min.js"></script>
-  <base target="_blank">
+  <!-- JAVASCRIPT, ANYONE? -->
+  <script type="text/javascript" src="rellax.min.js"></script>
+
+  <base target="_parent">
 </head>
 
 <body>
 
-  <div id="grid">
-    <div class="content-wrap">
-      <div class="grid-col"></div>
-      <div class="grid-col"></div>
-      <div class="grid-col"></div>
-      <div class="grid-col"></div>
-
-    </div>
+  <div class="grid-layout" id="lines">
+    <div></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
+    <div class="grid-line"></div>
   </div>
 
-  <header>
+  <header class="projects-grid no-margin project-rows">
+
+    <div class="project-title">
+      <h2>Bespoke Design</h2>
+
+    </div>
+    <div class="project-subtext">
+      <h3>Defining gift giving for Hallmark.</h3>
+
+    </div>
+    <div class="project-text">
+
+      <p>During my second module of university one of my courses was to design an interactive gift giving experience. </p>
+      <p>Me and a colleague, in collaboration with Hallmark, spent over 2 months looking for solutions to problems such as scallability, as well as building a persona to receive the so-called gift. </p>
+      <p>The final result was very satisfactory, winning an award for Best Overall Experience (the trophy was a chocolate letter!)</p>
+      <p>Below you can see the video we used to present the final product to the Hallmark marketing team.</p>
+    </div>
+
+
     <img src="../images/squiggle1.svg" id="squi1" class="rellax" data-rellax-speed="1">
     <img src="../images/squiggle2.svg" id="squi2" class="rellax" data-rellax-speed=".8">
     <img src="../images/cross1.svg" id="cross1" class="rellax" data-rellax-speed="1">
     <img src="../images/cross2.svg" id="cross2" class="rellax" data-rellax-speed=".5">
     <img src="../images/circle.svg" id="circle1" class="rellax" data-rellax-speed=".5">
     <img src="../images/circle.svg" id="circle2" class="rellax" data-rellax-speed="1">
-  </header>
 
+    <div class="project-highlights">
 
-  <div class="projects-wrap">
-
-    <div class="project-highlight">
-      <h2>Bespoke Design</h2>
-      <h3>A collaboration with Hallmark.</h3>
-      <div class="project-text" style="text-align: left;">
-        <p>During my second module of university one of my courses was to design an interactive gift giving experience. </p>
-        <p>Me and a colleague, in collaboration with Hallmark, spent over 2 months looking for solutions to problems such as scallability, as well as building a persona to receive the so-called gift. </p>
-        <p>The final result was very satisfactory, winning an award for Best Overall Experience (the trophy was a chocolate letter!)</p>
-        <p>Below you can see the video we used to present the final product to the Hallmark marketing team.</p>
-
-
-      </div>
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5RH2UmTZYOA?autoplay=1&loop=1&modestbranding=1&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"; allowfullscreen></iframe>
-      <img src="../images/profile.jpg" alt="">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5RH2UmTZYOA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-  </div>
+  </header>
 
 
 </body>

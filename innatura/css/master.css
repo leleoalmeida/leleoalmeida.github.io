@@ -38,7 +38,7 @@ h2 {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 1rem solid white;
+  /* border: 1rem solid white; */
 }
 
 .main-wrap h1 {

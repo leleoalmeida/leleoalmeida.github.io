@@ -42,7 +42,10 @@ function startTime() {
     document.getElementById('digital-clock').innerHTML =
       h_to_hms(mtc);
   }
+
+  document.getElementById('aliens').style.left = clock.getHours()*3+'%';
   var t = setTimeout(startTime, 500);
+
 }
 
 function checkTime(i) {
@@ -67,5 +70,3 @@ function changeTheme() {
     theme--;
   }
 }
-var clock = new Date();
-console.log(clock.getDay());

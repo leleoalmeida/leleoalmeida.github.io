@@ -95,7 +95,7 @@ h3 {
 #aula-ocorrendo {
   background-image: url(../images/aula.jpg);
   height: 700px;
-
+background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -124,6 +124,12 @@ h3 {
     float: left;
     width: 100%;
     margin-bottom: 15px;
+  }
+
+  .header-banner {
+    right: 0;
+    bottom: 0;
+    width: auto;
   }
 }
 

@@ -11,24 +11,25 @@ p {
   font-size: 1.1rem !important;
 }
 
-#home-banner {
-  display: flex;
-  height: 70vh;
-  /* background-image: url("../images/header.JPEG"); */
-  /* background-color: rgba(0, 0, 0, 1); */
-  background:
-    /* top, transparent black, faked with gradient */
-    linear-gradient(rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.4)),
-    /* bottom, image */
-    url("../images/header.JPEG");
+.bgimg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
 }
 
-#home-banner .jumbotron {
+#home-banner {
+  display: flex;
+  height: 66vh;
+  background-image: url("../images/capa.jpg");
+}
+
+#home-logo {
+  display: flex;
+  height: 34vh;
+  background-color: #C14339;
+}
+
+#home-banner .jumbotron, #home-logo .jumbotron {
   background-color: transparent !important;
   margin: 0 auto;
 }
@@ -39,7 +40,7 @@ p {
   font-weight: normal;
 }
 
-#home-banner>.jumbotron>img {
+#home-logo>.jumbotron>img {
   width: 300px !important;
 }
 
@@ -47,27 +48,97 @@ p {
   padding: 15px;
 }
 
-#quem-somos, #valores, #atendimentos, #cursos, #refeicoes-prontas, #contato, #equipe {
+#quem-somos, #valores, #atendimentos, #cursos, #refeicoes-prontas, #contato, #equipe, #produtos, #adriana, #izabel {
   border-radius: 0 !important;
   /* padding: 30px !important; */
   margin-bottom: 0;
 }
 
-#quem-somos, #atendimentos, #refeicoes-prontas {
+#atendimentos, #refeicoes-prontas, #produtos, #adriana {
   color: white !important;
   background-color: #bc2e23;
   /* margin: 0 !important; */
 }
 
-#valores, #cursos, #contato {
+#quem-somos, #atendimentos {
+  padding: 0;
+}
+
+/* MAKE MEDIA RESPONSIVE FOR THIS */
+#quem-somos>.container>.row>.col-lg-7 {
+  padding: 64px 20px 64px 0;
+}
+
+#quem-img {
+  background-image: url("../images/escritorio.jpg");
+}
+
+#valores, #cursos, #contato, #quem-somos, #izabel {
   /* padding: 30px 0 !important; */
   color: #726d54 !important;
   background-color: #f4f1e4;
 }
 
+#produtos-title {
+  display: table;
+  height: 100%;
+}
+
+#produtos-title>div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.imgproduto {
+  width: 100%;
+  height: 100%;
+  border: 3px #bc2e23 solid;
+}
+
+.imgproduto>div {
+  width: 70%;
+  font-size: 1.5rem;
+  background-color: #bc2e23;
+  position: absolute;
+  font-weight: bold;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  padding: 5px;
+}
+
+.imgproduto p {
+  margin: auto 0;
+}
+
+#produtocontainer {
+  height: 70vh;
+}
+
+#produtos1 {
+  background-image: url("../images/produto1.jpg");
+}
+
+#produtos2 {
+  background-image: url("../images/produto2.jpg");
+}
+
+#produtos3 {
+  background-image: url("../images/produto3.jpg");
+}
+
+#cursos .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
 #cursos .card {
-  height: 90%;
+  height: 100%;
   border: #bc2e23 solid 1px;
+}
+
+.margin60 {
+  margin-bottom: 30px;
 }
 
 .card {
@@ -83,15 +154,28 @@ p {
   margin-right: 15px;
 }
 
-#valores .col-lg-8:nth-child(2n) {
+/* #valores .col-lg-8:nth-child(2n) {
   margin: 0;
+} */
+#valores p {
+  line-height: 2;
 }
 
-#aula-ocorrendo {
-  background-image: url(../images/aula.jpg);
-  height: 700px;
-  background-size: cover;
-  background-repeat: no-repeat;
+#acreditamosimg {
+  background-image: url("../images/acreditamos.jpg");
+}
+
+#queremosimg {
+  background-image: url("../images/queremos.jpg");
+}
+
+#atendimentoimg {
+  background-image: url(../images/atendimento.jpg);
+}
+
+/* MAKE MEDIA RESPONSIVE FOR THIS */
+#atendimentotxt {
+  padding: 64px 0 64px 20px;
 }
 
 #refeicoes-img {
@@ -106,6 +190,22 @@ p {
 #equipe {
   color: #726d54;
   background-color: transparent !important;
+}
+
+#adrianaimg {
+  background-image: url("../images/adriana.jpg");
+  background-position: left !important;
+
+}
+
+#izabel {
+  line-height: 2;
+}
+
+#izabelimg {
+  background-image: url("../images/izabel.jpg");
+  background-position: top center !important;
+
 }
 
 #map {

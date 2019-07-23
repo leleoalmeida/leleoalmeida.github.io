@@ -60,18 +60,17 @@ p {
   /* margin: 0 !important; */
 }
 
-#quem-somos, #atendimentos {
-  padding: 0;
+#quem-somos {
+
 }
 
-/* MAKE MEDIA RESPONSIVE FOR THIS */
-#quem-somos>.container>.row>.col-lg-7 {
-  padding: 64px 20px 64px 0;
+#quem-img img, .fitimg, #acreditamosimg img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
-#quem-img {
-  background-image: url("../images/escritorio.jpg");
-}
+
 
 #valores, #cursos, #contato, #quem-somos, #izabel {
   /* padding: 30px 0 !important; */
@@ -92,6 +91,7 @@ p {
 .imgproduto {
   width: 100%;
   height: 100%;
+  padding: 0;
   border: 3px #bc2e23 solid;
 }
 
@@ -113,18 +113,6 @@ p {
 
 #produtocontainer {
   height: 70vh;
-}
-
-#produtos1 {
-  background-image: url("../images/produto1.jpg");
-}
-
-#produtos2 {
-  background-image: url("../images/produto2.jpg");
-}
-
-#produtos3 {
-  background-image: url("../images/produto3.jpg");
 }
 
 #cursos .card-img-top {
@@ -161,21 +149,12 @@ p {
   line-height: 2;
 }
 
-#acreditamosimg {
-  background-image: url("../images/acreditamos.jpg");
-}
-
 #queremosimg {
   background-image: url("../images/queremos.jpg");
 }
 
 #atendimentoimg {
   background-image: url(../images/atendimento.jpg);
-}
-
-/* MAKE MEDIA RESPONSIVE FOR THIS */
-#atendimentotxt {
-  padding: 64px 0 64px 20px;
 }
 
 #refeicoes-img {
@@ -195,7 +174,6 @@ p {
 #adrianaimg {
   background-image: url("../images/adriana.jpg");
   background-position: left !important;
-
 }
 
 #izabel {
@@ -205,7 +183,6 @@ p {
 #izabelimg {
   background-image: url("../images/izabel.jpg");
   background-position: top center !important;
-
 }
 
 #map {
@@ -238,10 +215,27 @@ p {
   #refeicoes-img {
     height: 300px;
   }
+
+  #produtocontainer {
+    height: auto;
+  }
+  .imgproduto {
+    height: 100vw
+  }
 }
 
 @media (min-width: 1200px) {
   .container {
     max-width: 970px;
+  }
+
+  /* MAKE MEDIA RESPONSIVE FOR THIS */
+  #atendimentotxt {
+    padding: 64px 0 64px 20px;
+  }
+
+  /* MAKE MEDIA RESPONSIVE FOR THIS */
+  #quem-somos>.container>.row>.col-lg-7 {
+    padding: 64px 20px 64px 0;
   }
 }

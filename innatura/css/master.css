@@ -7,13 +7,25 @@ h3 {
   font-size: 1.4rem;
 }
 
+p {
+  font-size: 1.1rem !important;
+}
+
 #home-banner {
   display: flex;
-  height: 100vh;
-  background-image: url("../images/header-image.jpg");
+  height: 70vh;
+  /* background-image: url("../images/header.JPEG"); */
+  /* background-color: rgba(0, 0, 0, 1); */
+  background:
+    /* top, transparent black, faked with gradient */
+    linear-gradient(rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)),
+    /* bottom, image */
+    url("../images/header.JPEG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
 }
 
 #home-banner .jumbotron {

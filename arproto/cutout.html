@@ -2,18 +2,36 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="./css/master.css">
+  <script src="./script.js" charset="utf-8" defer></script>
+  <title>UNBOOK</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150685387-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150685387-1');
+</script>
 </head>
 
 <body>
-  <div class="container">
+  <div id="container">
+
+    <button type="button" name="bigger" onclick="bigger()">+</button><button type="button" name="smaller" onclick="smaller()">-</button>
     <!-- <p>IF YOU HAVE CRACKED THE MESSAGE JUST GO TO THE NEXT PAGE OF THE BOOK. </p> -->
-    <p>IF YOU STOP, EVEN FOR A SECOND, TO THINK OF ALL THE THINGS YOU HAVE ACCOMPLISHED IN LIFE, MAYBE YOU WILL ALSO REALIZE ALL THE CODES YOU'VE CRACKED. INSTEAD OF SEARCHING FOR THE ENDLESS MEANING, A MESSAGE COULD BE HIDDEN JUST UNDER YOUR NOSE.
-      TO GO OUTSIDE, TO EXPLORE THE GREAT UNKNOWN, IT IS ALL PART OF A SEARCH FOR THE NEXT ADVENTURE. A LAST PAGE FULL OF IMAGES MIGHT BE WRITTEN IN THE BOOK OF LIFE.</p>
+    <p id="text">IF YOU STOP, EVEN FOR A<br>SECOND, TO THINK OF ALL<br> THE THINGS YOU HAVE<br> ACCOMPLISHED IN LIFE, <br>MAYBE YOU WILL ALSO<br> REALIZE ALL THE CODES<br> YOU'VE CRACKED. INSTEAD <br>OF SEARCHING FOR THE<br> ENDLESS MEANING, A<br>
+      MESSAGE
+      COULD BE HIDDEN <br>JUST UNDER YOUR NOSE.
+      TO <br>GO OUTSIDE, TO EXPLORE<br> THE GREAT UNKNOWN, IT IS <br>ALL PART OF A SEARCH FOR <br>THE NEXT ADVENTURE. A <br>LAST PAGE FULL OF IMAGES<br> MIGHT BE WRITTEN IN THE<br> BOOK OF LIFE.</p>
   </div>
+
+
 </body>
 
 </html>

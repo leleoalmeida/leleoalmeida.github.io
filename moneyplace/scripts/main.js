@@ -43,7 +43,7 @@ getMoney()
 
 function details() {
     var accContainer = document.getElementById('accounts');
-    accContainer.style.maxHeight = '600px';
+    accContainer.style.maxHeight = '40vh';
     console.log("ok")
 }
 

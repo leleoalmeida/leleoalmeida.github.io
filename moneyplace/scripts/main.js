@@ -29,10 +29,12 @@ function getMoney() {
 
 
         }
+        let lastModif = myJson.data.budget.last_modified_on.slice(0, 10);
+
 
 
         document.getElementById('total-money').innerHTML = totalMoney.toFixed(2) + ' €' + arrow;
-
+        document.getElementById('updated').innerHTML = "Last update: " + lastModif;
     })
 
 

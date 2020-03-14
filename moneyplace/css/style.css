@@ -26,6 +26,14 @@ body {
     overflow: hidden;
 }
 
+#updated {
+    bottom: 10%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
 @media only screen and (min-device-width: 35px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     #total-money {
         font-size: 7rem !important;

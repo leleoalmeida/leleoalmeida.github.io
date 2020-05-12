@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Weeks 7 & 8 - Building Engaging Prototypes | Leonardo Almeida</title>
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="script.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+  <div id="myModal" class="modal" onclick="this.style.display= 'none'">
+    <img class="modal-content" id="img01">
+  </div>
+
+  <header>
+  <a class="week-back" href="week5.html">
+  <p><</p>
+  </a>
+    <a class="week-next" href="final.html">
+      <p>></p>
+    </a>
+    <a href="index.html" class="week">
+      <p>WEEKS 7 & 8</p>
+    </a>
+
+
+    <h1>Experience Prototyping</h1>
+  </header>
+  <article class="portfolio-text">
+    <ul class="sidebar" type="none">
+      <li class="sidebar-item"><a href="#introduction">Introduction</a></li>
+      <li class="sidebar-item"><a href="#concept">Concept</a></li>
+      <li class="sidebar-item"><a href="#scenario">Scenario</a></li>
+      <li class="sidebar-item"><a href="#interface">Interface</a></li>
+      <li class="sidebar-item"><a href="#input">Input</a></li>
+      <li class="sidebar-item"><a href="#description">Description</a></li>
+      <li class="sidebar-item"><a href="#videos">Videos & Images</a></li>
+      <li class="sidebar-item"><a href="#reflection">Reflection</a></li>
+    </ul>
+
+
+
+
+
+    <h2 id="introduction">Introduction</h2>
+    <p>For our final building engaging prototypes assignment, we had to prototype experiences. In pairs we had to create a prototype which would react to body movement (also known as an exertion interface). The Wizard of Oz Prototype had to
+      stimulate social interaction and use projection mapping (spatial augmented reality). For this assignment we had to adhere to several requirements which were:</p>
+
+    <ul class="article-list">
+      <li>Make a wizard of Oz prototype;</li>
+      <li>The prototype should:</li>
+      <ul class="article-list">
+        <li>Work with a video projector;</li>
+        <li>Project interactive animations and/or images onto a floor, walls, objects or a combination of both;</li>
+        <li>Use body movement as ‘input’;</li>
+        <li>Stimulate social interaction (allowing players/users to cooperate or play together);</li>
+      </ul>
+    </ul>
+
+    <h2 id="concept">Concept</h2>
+    <p><b>Jump Stack</b><br><br>
+      1 player – player jumps each time a block reaches the one underneath to start stacking a block tower. If the block overlaps the next block becomes smaller, if you miss the tower you lose.<br>
+      2 player – one player is the blue block and the other is the yellow block. Players jump in turns to build a tower together. If the block overlaps the next block becomes smaller, if you miss the tower you lose.</p>
+
+    <h2 id="scenario">Scenario</h2>
+    <p>Whenever the user jumps the block is placed. If the user jumps too late or too early, they either lose (if the block doesn’t match up at all with the previous one) or the next block becomes smaller.</p>
+
+    <h2 id="interface">Interface elements</h2>
+    <ul class="article-list">
+      <li>Yellow and blue blocks that float on an axis;</li>
+      <li>Score.</li>
+    </ul>
+
+    <h2 id="input">Wizard input</h2>
+    <p>When the user jumps, the block is placed at the point where the user had jumped. So every time the user jumps a block is placed and stacks one by one.</p>
+
+    <h2 id="description">Description of prototype</h2>
+    <p>The game we created named Jump Stack is a game in which players have to jump to stack up blocks, creating a tower. Inspiration was taken from an arcade game in Game State. We have the option for 1 player and 2 players. If one person plays
+      that person controls all the blocks; if 2 people play one will control incoming yellow blocks and one will control incoming blue blocks. Players control the blocks by jumping when they want to place them. When blocks are stacked successfully
+      then the next block does not get smaller, but if the block overlaps the previous one, the next block becomes smaller. Players lose when they miss the block underneath.</p>
+
+    <h2 id="videos">Videos and photos of testing</h2>
+    <p>Whilst testing the prototype we didn't encounter any issues. We set up the projector to display the game on the wall and people would stand on the edges for a good view of the game.
+
+    </p>
+    <div class="video-div">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Ld3ov8OcQRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+    <figure class="grid-center">
+      <img src="images/week7testing.jpg" alt="Sofia and Celine trying the game" onclick="openImage(this.src)">
+
+      <figcaption>Sofia and Celine after playing the game.</figcaption>
+    </figure>
+    <h2 id="reflection">Reflection</h2>
+    <p>Since I have a background in coding, this assignment was not too difficult. We had a basis to start off with which helped a lot in terms of the logistics of the game. We added in the jumping interactivity and a score to make it more
+      competitive.</p>
+
+    <p>
+      Using Processing as a prototyping tool is different in that it’s not something I would normally consider using to prototype with due to the complexity and the skill required, but overall it was a good experience.</p>
+
+      <div class="end-week">
+        <p><i>END OF ENTRY</i></p>
+      </div>
+
+  </article>
+  <footer><a href="http://leleo.com.br">&hearts;2019 Leleo</a></footer>
+
+
+</body>
+
+</html>

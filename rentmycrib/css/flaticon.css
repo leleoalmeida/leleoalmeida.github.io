@@ -1,0 +1,81 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 22/06/2016 15:21
+  	*/
+
+@font-face {
+  font-family: 'Flaticon';
+  src: url('./fonts/Flaticon.eot');
+  src: url('./fonts/Flaticon.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/Flaticon.woff') format('woff'),
+       url('./fonts/Flaticon.ttf') format('truetype'),
+       url('./fonts/Flaticon.svg#Flaticon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'Flaticon';
+    src: url('./fonts/Flaticon.svg#Flaticon') format('svg');
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+vertical-align: middle;
+font-style: normal;
+font-size: 40px;
+}
+
+.flaticon-agreement:before { content: "\f100"; }
+.flaticon-baggage:before { content: "\f101"; }
+.flaticon-bathtub:before { content: "\f102"; }
+.flaticon-bed:before { content: "\f103"; }
+.flaticon-building:before { content: "\f104"; }
+.flaticon-building-1:before { content: "\f105"; }
+.flaticon-building-2:before { content: "\f106"; }
+.flaticon-check:before { content: "\f107"; }
+.flaticon-couple:before { content: "\f108"; }
+.flaticon-crane:before { content: "\f109"; }
+.flaticon-crane-1:before { content: "\f10a"; }
+.flaticon-document:before { content: "\f10b"; }
+.flaticon-electricity:before { content: "\f10c"; }
+.flaticon-entrance:before { content: "\f10d"; }
+.flaticon-factory:before { content: "\f10e"; }
+.flaticon-fair-price:before { content: "\f10f"; }
+.flaticon-family:before { content: "\f110"; }
+.flaticon-fence:before { content: "\f111"; }
+.flaticon-garage:before { content: "\f112"; }
+.flaticon-garage-1:before { content: "\f113"; }
+.flaticon-house:before { content: "\f114"; }
+.flaticon-house-1:before { content: "\f115"; }
+.flaticon-house-key:before { content: "\f116"; }
+.flaticon-house-price:before { content: "\f117"; }
+.flaticon-house-size:before { content: "\f118"; }
+.flaticon-imac:before { content: "\f119"; }
+.flaticon-ipad:before { content: "\f11a"; }
+.flaticon-key:before { content: "\f11b"; }
+.flaticon-laptop:before { content: "\f11c"; }
+.flaticon-location:before { content: "\f11d"; }
+.flaticon-lock:before { content: "\f11e"; }
+.flaticon-mailbox:before { content: "\f11f"; }
+.flaticon-map:before { content: "\f120"; }
+.flaticon-negotiation:before { content: "\f121"; }
+.flaticon-open-door:before { content: "\f122"; }
+.flaticon-paint-roller:before { content: "\f123"; }
+.flaticon-pet:before { content: "\f124"; }
+.flaticon-phone:before { content: "\f125"; }
+.flaticon-pipes:before { content: "\f126"; }
+.flaticon-plan:before { content: "\f127"; }
+.flaticon-search-home:before { content: "\f128"; }
+.flaticon-shop:before { content: "\f129"; }
+.flaticon-shower:before { content: "\f12a"; }
+.flaticon-sign:before { content: "\f12b"; }
+.flaticon-smartphone:before { content: "\f12c"; }
+.flaticon-sofa:before { content: "\f12d"; }
+.flaticon-statistic:before { content: "\f12e"; }
+.flaticon-swimming-pool:before { content: "\f12f"; }
+.flaticon-television:before { content: "\f130"; }
+.flaticon-truck:before { content: "\f131"; }

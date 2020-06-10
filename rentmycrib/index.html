@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<head>
+    <!-- LELEO.COM.BR 05/2018 #002 -->
+
+    <title>RENT MY CRIB!</title>
+    <link href="./css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="./css/flaticon.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="./imagens/ogimagem.png" />
+    <meta charset="UTF-8">
+</head>
+
+
+<body>
+    <!-- <div id="faixa" style="position: fixed; width: 100%; height: 100%; z-index: 1;"><img id="faixaimg" src="./imagens/faixa.png"></div> -->
+
+    <div style="width: 100%; background: linear-gradient(-45deg, #F08A5D, #F9ED69); padding-top: 3%; padding-bottom: 3%;">
+        <h1>RENT MY CRIB!</h1>
+    </div>
+
+
+    <div class="card">
+        <p style="text-align: center;"><b>Hi, I'm Leo.</b> I'm moving in with my girlfriend coming August and because we're living in another place, my <i>crib</i> is going to be empty. So if you're looking for a place to live, <b>maybe you have found it!</b></p>
+    </div>
+
+    <div style="width: 100%; margin: 0 auto; background-color: #F08A5D; text-align: center; padding-top: 2%; padding-bottom: 2%; position: relative;">
+        <div class="card" style="position: relative;">
+            <p>Tap <i class="fas fa-camera"></i> to see some photos.</p>
+        </div>
+        <picture>
+            <source srcset="./imagens/plantaver.png" media="(max-width: 700px)">
+            <img src="./imagens/plantahor.png" style="width: 90%;">
+        </picture>
+        <i id="quarto1" onclick="abrir_foto(this.id);" style="top: 80%; left: 18%;" class="fas fa-camera"></i>
+        <i id="quarto21" onclick="abrir_foto(this.id);" style="top: 80%; left: 35%;" class="fas fa-camera"></i>
+        <i id="quarto22" onclick="abrir_foto(this.id);" style="top: 38%; left: 37%;" class="fas fa-camera"></i>
+        <i id="banheiro" onclick="abrir_foto(this.id);" style="top: 27%; left: 44%;" class="fas fa-camera"></i>
+        <i id="sala" onclick="abrir_foto(this.id);" style="top: 20%; left: 61%;" class="fas fa-camera"></i>
+        <i id="cozinha" onclick="abrir_foto(this.id);" style="top: 46%; left: 65%;" class="fas fa-camera"></i>
+        <i id="cozinha1" onclick="abrir_foto(this.id);" style="top: 59%; left: 62%;" class="fas fa-camera"></i>
+        <i id="servico" onclick="abrir_foto(this.id);" style="top: 70%; left: 77%;" class="fas fa-camera"></i>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var modalImg = document.getElementById("img01");
+
+        function abrir_foto(id) {
+            modal.style.display = "block";
+            modalImg.src = "./imagens/" + id + "foto.JPG";
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("modal")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <div class="card">
+        <h2>MAIS INFO</h2>
+        <div class="coluna" style="display: flex; margin-top: 24px; margin-bottom: 24px;">
+            <div class="coluna50">
+                <p>
+                    <i class="flaticon flaticon-house-size"></i> Area: 71m&sup2; <br>
+                    <i class="flaticon flaticon-bed"></i> Bedrooms: 2 (+1 in the back)<br>
+                    <i class="flaticon flaticon-shower"></i> Bathrooms: 1 (+1 in the back) <br>
+                    <i class="flaticon flaticon-garage-1"></i> Parking spots: 1 <br>
+                    <i class="flaticon flaticon-bed"></i> Furnished<br>
+                    <i class="flaticon flaticon-paint-roller"></i> Refurbished Nov/2015<br>
+                    <i class="flaticon flaticon-open-door"></i> Available from August<br>
+                    <i class="flaticon flaticon-pet"></i>Pet-friendly building<br>
+                    <i class="flaticon flaticon-house-price"></i> IPTU: R$ ~180<br>
+                    <i class="flaticon flaticon-house-price"></i> Condomínio: R$ ~600<br>
+                    <i class="flaticon flaticon-negotiation"></i> Rent: R$ 1.700</p>
+
+                <p style="line-height: 30px;">
+                    There's a bakery right by it's side, two supermarkets at walking distance. The region is full of bars and restaurants, but there's no noise from the street. Liberdade square is less than 200 meters away, and you can get to the Savassi square in a 10 minute
+                    walk.
+                </p>
+            </div>
+
+            <div class="coluna50" style="background-color: #FFF;" id="map"></div>
+            <script>
+                var map;
+
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: {
+                            lat: -19.933500,
+                            lng: -43.935684
+                        },
+                        zoom: 17,
+                        disableDefaultUI: true,
+                        zoomControl: true,
+                        styles: [{
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#242f3e"
+                            }]
+                        }, {
+                            "elementType": "geometry.fill",
+                            "stylers": [{
+                                "color": "#f9ed69"
+                            }]
+                        }, {
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#746855"
+                            }]
+                        }, {
+                            "elementType": "labels.text.stroke",
+                            "stylers": [{
+                                "color": "#242f3e"
+                            }]
+                        }, {
+                            "featureType": "administrative",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        }, {
+                            "featureType": "administrative.locality",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        }, {
+                            "featureType": "administrative.locality",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#71cfd5"
+                            }, {
+                                "visibility": "on"
+                            }]
+                        }, {
+                            "featureType": "poi",
+                            "elementType": "labels.icon",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        }, {
+                            "featureType": "poi",
+                            "elementType": "labels.text.stroke",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        }, {
+                            "featureType": "road",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#38414e"
+                            }]
+                        }, {
+                            "featureType": "road",
+                            "elementType": "geometry.fill",
+                            "stylers": [{
+                                "color": "#f08a5d"
+                            }]
+                        }, {
+                            "featureType": "road",
+                            "elementType": "geometry.stroke",
+                            "stylers": [{
+                                "color": "#212a37"
+                            }, {
+                                "visibility": "off"
+                            }]
+                        }, {
+                            "featureType": "road",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#6a2c70"
+                            }]
+                        }, {
+                            "featureType": "road",
+                            "elementType": "labels.text.stroke",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        }, {
+                            "featureType": "road.highway",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#746855"
+                            }]
+                        }, {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.fill",
+                            "stylers": [{
+                                "color": "#6a2c70"
+                            }]
+                        }, {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.stroke",
+                            "stylers": [{
+                                "color": "#1f2835"
+                            }]
+                        }, {
+                            "featureType": "road.highway",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#f3d19c"
+                            }]
+                        }, {
+                            "featureType": "transit",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#2f3948"
+                            }]
+                        }, {
+                            "featureType": "transit.station",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        }, {
+                            "featureType": "water",
+                            "elementType": "geometry",
+                            "stylers": [{
+                                "color": "#17263c"
+                            }]
+                        }, {
+                            "featureType": "water",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{
+                                "color": "#515c6d"
+                            }]
+                        }, {
+                            "featureType": "water",
+                            "elementType": "labels.text.stroke",
+                            "stylers": [{
+                                "color": "#17263c"
+                            }]
+                        }]
+                    });
+
+                    var marker = new google.maps.Marker({
+                        position: {
+                            lat: -19.933500,
+                            lng: -43.935684
+                        },
+                        map: map,
+                        title: 'Hello World!',
+                        icon: './imagens/mapsIcone.png'
+                    });
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1_7ld8rsVSMygOwt0rwhKPEebXSRMWLk&amp;callback=initMap" async defer></script>
+
+        </div>
+
+        <h2>Did you like it? Let me know!</h2>
+        <p style="text-align: center;"><i class="flaticon flaticon-phone"></i> <a href="tel:+5531995600101">(31) 995 600 101</a><br>
+            <i class="flaticon flaticon-mailbox"></i> <a href="mailto:leo@leleo.com.br">leo@leleo.com.br</a>
+        </p>
+
+    </div>
+    <div class="card">
+        <p style="text-align: center; filter: opacity(20%);">&hearts;</p>
+    </div>
+</body>
+
+</html>

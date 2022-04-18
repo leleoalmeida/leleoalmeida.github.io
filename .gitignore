@@ -1,5 +1,6 @@
-
-moneyplace/.vs/VSWorkspaceState.json
-moneyplace/.vs/slnx.sqlite
-moneyplace/.vs/moneyplace/v16/.suo
-moneyplace/.vs/moneyplace/v16/.suo
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+# Useful .gitignore templates: https://github.com/github/gitignore
+node_modules
+dist
+.cache

@@ -343,8 +343,8 @@ p ~ p {
 }
 
 #portrait {
-  width: 288px;
-  height: 288px;
+  width: 240px;
+  height: 240px;
   filter: grayscale(100%) brightness(60%) sepia(60%) hue-rotate(-50deg)
     saturate(600%) contrast(0.8);
 }
@@ -385,17 +385,17 @@ ul {
   margin-bottom: 40px;
 }
 
-.ctas > svg {
+.ctas > img {
   cursor: pointer;
   transition: 800ms;
   text-decoration: none;
 }
 
-.ctas > svg:nth-child(n + 1):hover {
+.ctas > img:nth-child(n + 1):hover {
   transform: rotate(8.5deg);
   transition: 300ms;
 }
-.ctas > svg:hover {
+.ctas > img:hover {
   transform: rotate(-8.5deg);
   transition: 300ms;
 }

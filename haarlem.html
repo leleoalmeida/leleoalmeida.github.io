@@ -28,6 +28,10 @@
       href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   </head>
 
   <body>
@@ -39,8 +43,16 @@
         <h1>
           Improving public services through design with the Gemeente Haarlem
         </h1>
-        <h2>User Experience Intern - Feb 2021</h2>
-
+        <p>
+          Mijn Uitkeringen was a platform designed as part of my graduation
+          project for the Hague University of Applied Sciences while working for
+          the Haarlem Municipality. The project was done at the Innovation and
+          Technology department, together with workers from the Work and Income
+          department. The platform was created to help bridge the communication
+          gap between residents and social workers. Apart from the digital
+          platform, a concept for physical document exchange was proposed as a
+          way to accelerate some processes.
+        </p>
         <ul aria-label="Project objectives" class="work-objectives">
           <li>
             Bridge the communication gap between municipality workers and
@@ -50,7 +62,25 @@
           <li>Create a better way to exchange files and documents</li>
         </ul>
       </div>
-      <div class="work-details"></div>
+      <div class="work-details">
+        <div
+          class="main-carousel"
+          data-flickity='{ "cellAlign": "left", "contain": true }'
+        >
+          <div class="carousel-cell">
+            <img src="./img/haarlem/blueprint.jpg" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="./img/haarlem/flow.png" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="./img/haarlem/screen1.png" alt="" />
+          </div>
+          <div class="carousel-cell">
+            <img src="./img/haarlem/screen2.png" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
@@ -69,6 +99,7 @@
       ga("set", "transport", "beacon");
       ga("send", "pageview");
     </script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
   </body>
 </html>

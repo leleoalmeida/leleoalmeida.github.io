@@ -23,6 +23,7 @@ html {
   font-size: 1em;
   line-height: 1.4;
   scroll-behavior: smooth;
+  font-family: decoy;
 }
 
 /*
@@ -423,6 +424,11 @@ ul {
   font-size: 120%;
   font-weight: bold;
   margin-left: -15px;
+}
+
+.carousel-cell {
+  height: 700px;
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {

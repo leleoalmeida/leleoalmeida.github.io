@@ -363,6 +363,11 @@ p~p {
   padding: 80px 80px 0 24px;
 }
 
+.highlight {
+  padding: 16px;
+  border-left: 4px solid var(--red-salsa);
+}
+
 ul {
   list-style-type: none;
   font-family: decoy, serif;

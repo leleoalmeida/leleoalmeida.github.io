@@ -316,6 +316,8 @@ p~p {
   box-sizing: border-box;
 }
 
+
+
 /* .work {
   padding-top: 80px;
   grid-auto-rows: auto;
@@ -370,7 +372,8 @@ p~p {
   border-left: 4px solid var(--red-salsa);
 }
 
-ul {
+.works,
+.contact {
   list-style-type: none;
   font-family: decoy, serif;
   font-weight: 300;
@@ -380,7 +383,7 @@ ul {
   color: var(--jet);
 }
 
-#works li:after {
+.works li:after {
   content: "subdirectory_arrow_right";
   font-family: "Material Icons Round";
   color: var(--red-salsa);
@@ -388,7 +391,7 @@ ul {
   top: -20px;
 }
 
-#works li {
+.works li {
   margin-bottom: 40px;
 }
 
@@ -440,8 +443,36 @@ ul {
   width: 100%;
 }
 
+
+
+/* PROJECT PAGES */
+.project-container {
+  gap: 0 24px;
+  /* align-items: center; */
+}
+
+.proj-info {
+  font-size: 24px;
+  margin: 24px 0 0 0;
+}
+
+.project-container>p~p,
+.project-container>h2~h2 {
+  /* margin-top: 24px; */
+
+}
+
+.proj-info li {
+  font-weight: 300;
+}
+
+
 @media screen and (max-width: 600px) {
   .main-container:nth-child(1) {
+    display: none;
+  }
+
+  #images {
     display: none;
   }
 

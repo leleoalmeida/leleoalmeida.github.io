@@ -14,6 +14,12 @@
   --bg-color: #f0f8ea;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+}
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -271,6 +277,7 @@ textarea {
   }
 }
 
+
 body {
   background-color: var(--bg-color);
 }
@@ -290,12 +297,29 @@ h1 {
   line-height: 57px;
 }
 
-p {
-  font-family: decoy, serif;
-  font-weight: 300;
+h2 {
+  color: var(--Jet, #444140);
+  text-align: right;
+
+  /* Desktop/H2 */
+  font-family: Decoy;
+  font-size: 40px;
   font-style: normal;
-  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
   margin: 0;
+}
+
+p {
+  color: var(--Jet, #444140);
+  font-family: "IBM Plex Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 33.6px */
+  margin: 0;
+
 }
 
 p~p {
@@ -424,6 +448,7 @@ p~p {
   display: none;
   width: 400px;
   /* transition: 300ms; */
+  border-radius: 24px;
 }
 
 #cv-button {
@@ -446,24 +471,29 @@ p~p {
 
 
 /* PROJECT PAGES */
-.project-container {
-  gap: 0 24px;
-  /* align-items: center; */
-}
 
-.proj-info {
+#return-button {
+  color: var(--Red-Salsa, #E54B4B);
+  font-family: Decoy;
   font-size: 24px;
-  margin: 24px 0 0 0;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33.6px;
+  /* 140% */
 }
 
-.project-container>p~p,
-.project-container>h2~h2 {
-  /* margin-top: 24px; */
-
+.project-image {
+  width: 100%;
+  box-shadow: 0 8px 28px 8px rgba(0, 0, 0, 0.25);
 }
 
-.proj-info li {
-  font-weight: 300;
+.img-container {
+  width: 100%;
+  padding: 40px;
+  border-radius: 24px;
+  background-color: var(--red-salsa);
+  box-sizing: border-box;
+  overflow-x: scroll;
 }
 
 
